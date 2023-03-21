@@ -1,7 +1,7 @@
 <h1 align="center">
 Easy Dogecoin Gateway for Blesta
 <br><br>
-<img src="https://dogegarden.io.com/img/blesta.png" alt="Easy Dogecoin Gateway for Blesta" />
+<img src="https://dogegarden.com/img/blesta.png" alt="Easy Dogecoin Gateway for Blesta" />
 <br><br>
 </h1>
 
