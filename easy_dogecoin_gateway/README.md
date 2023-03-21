@@ -1,7 +1,5 @@
 # Easy Dogecoin Gateway
 
-[![Build Status](https://github.com/qlpqlp/blesta-easy-dogecoin-gateway?branch=master)](https://github.com/qlpqlp/blesta-easy-dogecoin-gateway)
-
 This is a placeholder gateway that will present users will instructions for offline payment.
 
 ## Install the Gateway
