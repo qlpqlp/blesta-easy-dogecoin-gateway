@@ -1,0 +1,34 @@
+<div class="alert alert-info" role="alert" style="">
+<?php
+echo $this->TextParser->encode('markdown', $this->Html->ifSet($meta['instructions']));
+?>
+</div><img src="">
+                    <div class="alert alert-warning" role="alert" style="">
+                      <i class="fa fa-qrcode" aria-hidden="true"></i> Scan the QR code or copy the Doge Address <b><?php echo $this->Html->ifSet($meta['dogecoin_address']); ?></b> to pay the exact amount of <b>Ð <?php echo $amount; ?></b> to buy it.
+                      You can close the browser after payment.
+                    </div>
+                  <div class="card-body" style="text-align: center;">                  
+                    <img style="position:relative;z-index:69;max-width: 200px; padding:10px; background-color:#fff; margin-top:50px" id="qrcode" src="//api.qrserver.com/v1/create-qr-code/?data=dogecoin:<?php echo $this->Html->ifSet($meta['dogecoin_address']); ?>?amount=<?php echo $amount; ?>&amp;size=200x200" alt="" title="Such QR Code!" class="card-img-top">
+                    <div style="position:relative;z-index:68; top:-260px;height:20px"><img style="max-width:100px;" src="<?php echo $this->view_dir.'images/doge.png'; ?>"></div>                            
+                    <div style="font-size: 16px; font-weight: bold; background-color: #FFFFFF; border: 1px solid #999999; padding: 10px; border-radius: 50px; margin: 10px">
+
+<?php
+if (isset($meta['mydoge'])){
+    $mydoge_pay = "🥳🎉🐶🔥🚀%0a@MyDogeTip%20tip%20@".$this->Html->ifSet($meta['mydoge'])."%20".$amount."%20Doge%20";
+    $mydoge_wallet_link = 'https://twitter.com/intent/tweet?text='.$mydoge_pay.'%20 TwitterPay Order id: '.$order.'%0a%0a $Doge%0a&hashtags=Dogecoin';
+?>
+<a href="<?php echo $mydoge_wallet_link; ?>" target="_blank" class="btn btn-primary"><i class="fa fa-twitter" aria-hidden="true"></i> MyDogeTip</a>
+<?php
+}
+
+if (isset($meta['sodoge'])){
+    $sodoge_pay = "🥳🎉🐶🔥🚀%0a@MSoDogeTip%20tip%20@".$this->Html->ifSet($meta['sodoge'])."%20".$amount."%20Doge%20";
+    $sodoge_wallet_link = 'https://twitter.com/intent/tweet?text='.$sodoge_pay.'%20 TwitterPay Order id: '.$order.'%0a%0a $Doge%0a&hashtags=Dogecoin';
+?>
+<a href="<?php echo $mydoge_wallet_link; ?>" target="_blank" class="btn btn-primary"><i class="fa fa-twitter" aria-hidden="true"></i> SoDogeTip</a>
+<?php
+};
+?>
+                    </div>
+                  </div>
+                  <?php //exit(); ?>

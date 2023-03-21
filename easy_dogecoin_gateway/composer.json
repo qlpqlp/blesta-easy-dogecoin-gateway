@@ -1,0 +1,9 @@
+{
+    "name": "blesta/easy_dogecoin_gateway",
+    "description": "EasyDogecoinGateway",
+    "license": "proprietary",
+    "type": "blesta-gateway-nonmerchant",
+    "require": {
+        "blesta/composer-installer": "~1.0"
+    }
+}

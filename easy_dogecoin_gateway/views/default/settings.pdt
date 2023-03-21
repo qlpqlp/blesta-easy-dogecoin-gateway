@@ -1,0 +1,28 @@
+
+
+	<ul>
+		<li>
+			<?php
+            $this->Form->label($this->_('EasyDogecoinGateway.dogecoin_address', true), 'dogecoin_address');
+            $this->Form->fieldText('dogecoin_address', (isset($meta['dogecoin_address']) ? $meta['dogecoin_address'] : null), ['id'=>'dogecoin_address']);
+            ?>
+		</li>
+		<li>
+			<?php
+            $this->Form->label($this->_('EasyDogecoinGateway.mydoge', true), 'mydoge');
+            $this->Form->fieldText('mydoge', (isset($meta['mydoge']) ? $meta['mydoge'] : null), ['id'=>'mydoge']);
+            ?>
+		</li>
+		<li>
+			<?php
+            $this->Form->label($this->_('EasyDogecoinGateway.sodoge', true), 'sodoge');
+            $this->Form->fieldText('sodoge', (isset($meta['sodoge']) ? $meta['sodoge'] : null), ['id'=>'sodoge']);
+            ?>
+		</li>						
+		<li>
+			<?php
+            $this->Form->label($this->_('EasyDogecoinGateway.instructions', true), 'instructions');
+            $this->Form->fieldTextarea('instructions', $this->Html->ifSet($meta['instructions']), ['id'=>'instructions', 'data-markdown-editor' => '']);
+            ?>
+		</li>
+	</ul>
